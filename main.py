@@ -1,10 +1,10 @@
 
-
+currency = [a,b,c,d]
 def add_edge(mat, i, j, weight):
   
     # Add an edge between two vertices
     mat[i][j] = weight  # Graph is 
-    mat[j][i] = weight  # Undirected
+    mat[j][i] = weight**(-1)  #directed
 
 def display_matrix(mat):
   
@@ -23,15 +23,6 @@ add_edge(mat, 0, 2,1)
 add_edge(mat, 1, 2,1)
 add_edge(mat, 2, 3,1)
 
-# Optionally, initialize matrix directly
-"""
-mat = [
-    [0, 1, 0, 0],
-    [1, 0, 1, 0],
-    [0, 1, 0, 1],
-    [0, 0, 1, 0]
-]
-"""
 
 # Display adjacency matrix
 print("Adjacency Matrix:")
