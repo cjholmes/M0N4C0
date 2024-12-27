@@ -1,0 +1,5 @@
+#SECRETS HERE!!!
+.venv/
+*.env*
+__pycache__/
+garden.json
