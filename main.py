@@ -1,6 +1,9 @@
+from collections import deque
+import random
 
-currency = [a,b,c,d]
-def add_edge(mat, i, j, weight):
+
+currency = ["a","b","c","d"]
+def add_edge(mat, i : float, j : float, weight : float):
   
     # Add an edge between two vertices
     mat[i][j] = weight  # Graph is 
@@ -12,18 +15,22 @@ def display_matrix(mat):
     for row in mat:
         print(" ".join(map(str, row)))  
 
+def trade_opt(adj, s):
+    return
+
 # Main function to run the program
 
-V = 4  # Number of vertices
-mat = [[0] * V for _ in range(V)]  
+V = len(currency)  # Number of vertices
+adj = [[0] * V for i in range(V)]  
 
+for i in range(1,len(currency)):
+    add_edge(adj, i, i-1, random.random())
 # Add edges to the graph
-add_edge(mat, 0, 1,1)
-add_edge(mat, 0, 2,1)
-add_edge(mat, 1, 2,1)
-add_edge(mat, 2, 3,1)
+
 
 
 # Display adjacency matrix
 print("Adjacency Matrix:")
-display_matrix(mat)
+display_matrix(adj)
+for i in range(1,len(currency)):
+    print(adj[i][i-1]*adj[i-1][i])
